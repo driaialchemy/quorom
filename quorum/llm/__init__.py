@@ -1,5 +1,8 @@
 """LLM client wrappers for Quorum."""
 
+from quorum.llm.anthropic_client import AnthropicLLMClient
+from quorum.llm.gemini_client import GeminiLLMClient
+from quorum.llm.openai_client import OpenAILLMClient
 from quorum.llm.utils import (
     LLMParseError,
     RateLimitError,
@@ -9,6 +12,9 @@ from quorum.llm.utils import (
 )
 
 __all__ = [
+    "AnthropicLLMClient",
+    "GeminiLLMClient",
+    "OpenAILLMClient",
     "LLMParseError",
     "RateLimitError",
     "build_retry_prompt",
